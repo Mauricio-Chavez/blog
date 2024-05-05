@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock head %}
+{%block title %}Home{% endblock %}
+
+{% block content %}
+    
+    <div class="main-container">
+        <div class="img-container">
+            <img src="{% static 'img/logo.jpg'%}" alt="logo">
+        </div>
+        <div class="rigth-container">
+            <h1>Welcome to BlogTech</h1>
+            <p>Welcome to BlogTech where the community comes together to share ideas, experiences and moments. With our platform, you can create and discover posts on a variety of topics. From helpful tips to inspirational musings, you'll find a wide range of user-generated content here. Join the conversation, follow your favorite creators and participate in an ever-growing community - start exploring now!</p>
+        </div>
+        </div>
+    </div>
+{% endblock content%}  

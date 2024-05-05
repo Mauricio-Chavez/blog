@@ -1,0 +1,28 @@
+.main-container{
+    display: flex;
+    gap: 8rem;
+}
+img {
+    max-width: 100%;
+    border-radius: 40px;
+}
+
+.img-container {
+    flex: 1.5;
+}
+.main-container {
+    margin-top: 4rem;
+}
+.main-container h1{
+    text-align: center;
+}
+.main-container p{
+    margin-top: 4rem;
+    text-align: justify;
+    font-size: 1.6rem;
+}
+.rigth-container{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}

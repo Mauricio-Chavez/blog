@@ -1,0 +1,32 @@
+.post-title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-title-container .author{
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(158, 158, 158);
+    font-weight: bold;
+}
+.post-container .highlight{
+    color: rgb(124, 124, 124);
+}
+.post-container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.post-container p{
+    margin: 0;
+    color: rgb(6, 6, 255);
+}
+a{
+    text-decoration: none; 
+    color: inherit;
+} 
+

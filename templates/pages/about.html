@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock head %}
+{%block title %}About{% endblock %}
+
+{% block content %}
+    <h1>About</h1>
+    <div class="main-container">
+        <div class="img-container">
+            <img src="{% static 'img/nutria.jpg'%}" alt="">
+        </div>
+        <p>I am a passionate student of software engineering at the Autonomous University of Baja California, located in the vibrant city of Tijuana. From a very early age, I have been attracted to the world of programming, where I find a space for creativity and intellectual challenge. Along with programming, video games are my other great passion, being my main forms of entertainment and source of inspiration.
+            <br>
+            <br>
+            My biggest dream is to one day reach the opportunity to be part of the team of talented professionals at Google. I know it is an ambitious goal, but I strongly believe in the power of hard work, perseverance and dedication to achieve the most challenging goals.
+            <br>
+            <br>
+            Through my academic background and passion for technology, I am constantly looking to learn, grow and improve my skills in software development. Every challenge is an opportunity to expand my knowledge and face new experiences that bring me one step closer to my career goals.
+            <br>
+            <br>
+            I would love to connect with others passionate about technology and share ideas, projects and knowledge, feel free to contact me if you want to talk about programming, video games or any topic related to software engineering!
+        </p>
+            
+            
+    </div>
+{% endblock content%}  

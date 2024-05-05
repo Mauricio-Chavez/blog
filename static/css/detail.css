@@ -1,0 +1,20 @@
+.date, .author, .status{
+    text-align: right;
+    margin: 0;
+}
+.author b{
+    color:rgb(4, 4, 54);
+}
+.author{
+    color: black;
+}
+.status{
+    color: rgb(153, 153, 153);
+    font-weight: bold;
+}
+.main-container{
+    margin-top: 3rem;
+}
+h1{
+    margin-bottom: 3rem;
+}
