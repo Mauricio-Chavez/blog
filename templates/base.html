@@ -27,6 +27,14 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                     <a class="nav-link" href="{% url 'new' %}">Create Post</a>
                     <a class="nav-link" href="{% url 'list' %}">List</a>
+                    {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <input type="submit" class="nav-link" value="Log Out">
+                    </form>
+                    {% else %}
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
