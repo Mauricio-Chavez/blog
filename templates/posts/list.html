@@ -17,8 +17,12 @@
                     </div>
                     <p>{{ post.subtitle }}</p>
                     <small><b>Created On: </b>{{ post.created_on }}</small>
-                    <a href="{% url 'edit' post.id %}" class="btn btn-outline-primary">Edit</a>
-                    <a href="{% url 'delete' post.id %}" class="btn btn-outline-danger">Delete</a>
+                    {% if user.is_authenticated %}
+                        {% if user == post.author %}
+                            <a href="{% url 'edit' post.id %}" class="btn btn-outline-primary">Edit</a>
+                            <a href="{% url 'delete' post.id %}" class="btn btn-outline-danger">Delete</a>
+                        {% endif %}
+                    {% endif %}
                 </a>
             </div>
         {% endfor %}
