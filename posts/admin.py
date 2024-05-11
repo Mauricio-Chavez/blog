@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Post,Status
+from .models import Post, Status
+
 # Register your models here.
-admin.site.register([Post,Status])
+admin.site.register([Post, Status])

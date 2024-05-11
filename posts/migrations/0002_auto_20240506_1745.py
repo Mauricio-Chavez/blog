@@ -2,13 +2,14 @@
 
 from django.db import migrations
 
+
 def populate_status(apps, schema_editor):
     entries = {
-        'draft': 'A post that is not ready to be published',
-        'published': 'A post available for all to see',
-        'archived': 'An older post available in te archive only',
+        "draft": "A post that is not ready to be published",
+        "published": "A post available for all to see",
+        "archived": "An older post available in te archive only",
     }
-    Status = apps.get_model('posts', 'Status')
+    Status = apps.get_model("posts", "Status")
     for key, value in entries.items():
         status_obj = Status(name=key, description=value)
         status_obj.save()
@@ -17,9 +18,7 @@ def populate_status(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0001_initial'),
+        ("posts", "0001_initial"),
     ]
 
-    operations = [
-        migrations.RunPython(populate_status)
-    ]
+    operations = [migrations.RunPython(populate_status)]

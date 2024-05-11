@@ -16,6 +16,7 @@
                         <p class="author"><span class="highlight">Posted -</span> {{post.author}}</p>
                     </div>
                     <p>{{ post.subtitle }}</p>
+                    <p>{{post.body|slice:':128'}}</p>
                     <small><b>Created On: </b>{{ post.created_on }}</small>
                     {% if user.is_authenticated %}
                         {% if user == post.author %}
