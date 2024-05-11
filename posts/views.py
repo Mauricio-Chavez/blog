@@ -63,12 +63,20 @@ class PostDetailView(DetailView,UserPassesTestMixin):
     # context_object_name = 'post'
     def dispatch(self, request, *args, **kwargs):
         post = self.get_object()
-        if str(post.status) == 'archived' and (not request.user.is_authenticated):
-            print('entro')
+        if str(post.status) == 'archived' and (not request.user.is_authenticated) or str(post.status) == 'draft' and (not request.user.is_authenticated):
             return redirect('login')
-        
         return super().dispatch(request, *args, **kwargs)
-
+    
+    # def test_func(self):
+    #     post = self.get_object()
+    #     if post.status.name == 'published':
+    #         return True
+    #     else:
+    #         if post.status.name == 'draft':
+    #             return self.request.user == post.author
+    #         elif post.status.name == 'archived':
+    #             return True
+    #     return False
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     template_name = "posts/new.html"
